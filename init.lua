@@ -27,6 +27,9 @@ return {
   },
 
   lsp = {
+    config = {
+      glsl = {}, -- require'lspconfig'.glslls.setup{},
+    },
     -- customize lsp formatting options
     formatting = {
       -- control auto formatting on save
@@ -62,6 +65,13 @@ return {
         -- customize default disabled vim plugins
         disabled_plugins = { "tohtml", "gzip", "matchit", "zipPlugin", "netrwPlugin", "tarPlugin" },
       },
+    },
+  },
+  plugins = {
+    {
+      "tikhomirov/vim-glsl", 
+      event = "BufEnter *.vert,*.frag",
+      enabled = true,
     },
   },
 

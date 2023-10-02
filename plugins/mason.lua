@@ -1,4 +1,5 @@
 -- customize mason plugins
+
 return {
   -- use mason-lspconfig to configure LSP installations
   {
